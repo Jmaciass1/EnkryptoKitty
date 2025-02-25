@@ -2173,7 +2173,7 @@ class Ui_MainWindow(object):
 #endif // QT_CONFIG(tooltip)
         self.closeAppBtn.setText("")
         self.classical_list.setItemText(0, QCoreApplication.translate("MainWindow", u"Desplazamiento", None))
-        self.classical_list.setItemText(1, QCoreApplication.translate("MainWindow", u"Sustitución", None))
+        self.classical_list.setItemText(1, QCoreApplication.translate("MainWindow", u"Permutación", None))
         self.classical_list.setItemText(2, QCoreApplication.translate("MainWindow", u"Vigenere", None))
         self.classical_list.setItemText(3, QCoreApplication.translate("MainWindow", u"Afín", None))
         self.classical_list.setItemText(4, QCoreApplication.translate("MainWindow", u"Hill", None))

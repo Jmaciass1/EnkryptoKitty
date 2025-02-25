@@ -28,6 +28,10 @@ Primero, navega hasta la carpeta de la interfaz gráfica (**gui**):
   ```
   source myenv/bin/activate
   ```
+- Si da problemas de permisos, ejecutar y luego repetir el paso anterior
+  ```
+  Set-ExecutionPolicy Unrestricted -Scope CurrentUser
+  ```
 ### 3. Instalar dependencias
 Puedes instalar todas las dependencias ejecutando:
 ```
