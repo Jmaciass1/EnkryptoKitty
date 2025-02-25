@@ -24,9 +24,13 @@ Primero, navega hasta la carpeta de la interfaz gráfica (**gui**):
   ```
   python -m venv myenv
   ```
-- Activar ambiente virtual
+- Activar ambiente virtual(MAC)
   ```
   source myenv/bin/activate
+  ```
+  - Activar ambiente virtual(Windows)
+  ```
+  myenv\Scripts\Activate
   ```
 - Si da problemas de permisos, ejecutar y luego repetir el paso anterior
   ```
