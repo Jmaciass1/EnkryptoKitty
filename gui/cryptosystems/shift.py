@@ -1,32 +1,19 @@
 import random
-
-def cifrar_desplazamiento(texto, clave):
-    texto_cifrado = ""
-    for caracter in texto:
-        if ' ' <= caracter <= '~':
-            # Asegurarse de que el caracter esté en el rango ASCII imprimible (32-126)
-            codigo = ord(caracter)
-            codigo_cifrado = ((codigo - 32 + clave) % 95) + 32  # 95 caracteres imprimibles
-            texto_cifrado += chr(codigo_cifrado)
-        else:
-            texto_cifrado += caracter  # Mantener caracteres no imprimibles sin cambios
-
-    return texto_cifrado
-
-def descifrar_desplazamiento(texto_cifrado, clave):
-    texto_descifrado = ""
-    clave_inversa = 95 - clave  # Clave inversa para descifrar
-
-    for caracter in texto_cifrado:
-        if ' ' <= caracter <= '~':
-            # Asegurarse de que el caracter esté en el rango ASCII imprimible (32-126)
-            codigo = ord(caracter)
-            codigo_descifrado = ((codigo - 32 + clave_inversa) % 95) + 32  # 95 caracteres imprimibles
-            texto_descifrado += chr(codigo_descifrado)
-        else:
-            texto_descifrado += caracter  # Mantener caracteres no imprimibles sin cambios
-
-    return texto_descifrado
+import string
 
 def generar_clave_desplazamiento():
-    return random.randint(1, 94)  # Genera una clave aleatoria entre 1 y 94
+    """Genera una clave aleatoria entre 1 y 25 para el cifrado César."""
+    return random.randint(1, 25)
+
+def cifrar_desplazamiento(text, key):
+    """Cifra un mensaje usando el cifrado César con módulo 26."""
+    alphabet = string.ascii_uppercase
+    text = text.upper()
+    encrypted_text = "".join(alphabet[(alphabet.index(c) + key) % 26] if c in alphabet else c for c in text)
+    return encrypted_text
+
+def descifrar_desplazamiento(text, key):
+    """Descifra un mensaje cifrado con el cifrado César en módulo 26."""
+    alphabet = string.ascii_uppercase
+    decrypted_text = "".join(alphabet[(alphabet.index(c) - key) % 26] if c in alphabet else c for c in text)
+    return decrypted_text
