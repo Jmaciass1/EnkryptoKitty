@@ -689,17 +689,19 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_8.addWidget(self.btn_public_key)
 
-        # self.btn_analysis = QPushButton(self.topMenu)
-        # self.btn_analysis.setObjectName(u"btn_analysis")
-        # sizePolicy.setHeightForWidth(self.btn_analysis.sizePolicy().hasHeightForWidth())
-        # self.btn_analysis.setSizePolicy(sizePolicy)
-        # self.btn_analysis.setMinimumSize(QSize(0, 70))
-        # self.btn_analysis.setFont(font)
-        # self.btn_analysis.setCursor(QCursor(Qt.PointingHandCursor))
-        # self.btn_analysis.setLayoutDirection(Qt.LeftToRight)
-        # self.btn_analysis.setStyleSheet(u"background-image: url(:/icons/images/icons/analysis.png)")
 
-        # self.verticalLayout_8.addWidget(self.btn_analysis)
+        #ANALISIS DE BRAUER
+        self.btn_analysis = QPushButton(self.topMenu)
+        self.btn_analysis.setObjectName(u"btn_analysis")
+        sizePolicy.setHeightForWidth(self.btn_analysis.sizePolicy().hasHeightForWidth())
+        self.btn_analysis.setSizePolicy(sizePolicy)
+        self.btn_analysis.setMinimumSize(QSize(0, 70))
+        self.btn_analysis.setFont(font)
+        self.btn_analysis.setCursor(QCursor(Qt.PointingHandCursor))
+        self.btn_analysis.setLayoutDirection(Qt.LeftToRight)
+        self.btn_analysis.setStyleSheet(u"background-image: url(:/images/images/images/gato_ico.png);")
+
+        self.verticalLayout_8.addWidget(self.btn_analysis)
 
 
         self.verticalMenuLayout.addWidget(self.topMenu, 0, Qt.AlignTop)
@@ -2136,7 +2138,7 @@ class Ui_MainWindow(object):
         self.btn_classical.setText(QCoreApplication.translate("MainWindow", u"Encriptación clásica", None))
         self.btn_block.setText(QCoreApplication.translate("MainWindow", u"Encriptación de Imágenes", None))
         self.btn_public_key.setText(QCoreApplication.translate("MainWindow", u"Encriptación de llave pública", None))
-        # self.btn_analysis.setText(QCoreApplication.translate("MainWindow", u"Analysis", None))
+        self.btn_analysis.setText(QCoreApplication.translate("MainWindow", u"Análisis de frecuencia", None))
         self.extraLabel.setText(QCoreApplication.translate("MainWindow", u"Left Box", None))
 #if QT_CONFIG(tooltip)
         self.extraCloseColumnBtn.setToolTip(QCoreApplication.translate("MainWindow", u"Close left box", None))
@@ -2233,8 +2235,8 @@ class Ui_MainWindow(object):
         self.block_key_message.setText(QCoreApplication.translate("MainWindow", u"Llave", None))
         self.block_decrypt_btn.setText(QCoreApplication.translate("MainWindow", u"Desencriptar", None))
         self.block_decrypt_output.setText("")
-        self.crypto_tittle.setText(QCoreApplication.translate("MainWindow", u"CRYPTOANALYSIS", None))
-        self.crypto_analysis_btn.setText(QCoreApplication.translate("MainWindow", u"Analyze", None))
+        self.crypto_tittle.setText(QCoreApplication.translate("MainWindow", u"Criptoanálisis de frecuencias", None))
+        self.crypto_analysis_btn.setText(QCoreApplication.translate("MainWindow", u"Analizar", None))
         self.public_key_list.setItemText(0, QCoreApplication.translate("MainWindow", u"RSA", None))
         self.public_key_list.setItemText(1, QCoreApplication.translate("MainWindow", u"Rabin", None))
         self.public_key_list.setItemText(2, QCoreApplication.translate("MainWindow", u"ElGamal", None))

@@ -86,7 +86,7 @@ class MainWindow(QMainWindow):
         widgets.btn_classical.clicked.connect(self.buttonClick)
         widgets.btn_block.clicked.connect(self.buttonClick)
         widgets.btn_public_key.clicked.connect(self.buttonClick)
-        # widgets.btn_analysis.clicked.connect(self.buttonClick)
+        widgets.btn_analysis.clicked.connect(self.buttonClick)
         
         # EXTRA LEFT BOX
         def openCloseLeftBox():
@@ -168,11 +168,11 @@ class MainWindow(QMainWindow):
             self.ui.public_key_list.setCurrentIndex(1)
             self.ui.public_key_list.setCurrentIndex(0)
 
-        # if btnName == "btn_analysis":
-        #     widgets.stackedWidget.setCurrentWidget(widgets.cryptoanalysis)
-        #     UIFunctions.resetStyle(self, btnName)
-        #     btn.setStyleSheet(UIFunctions.selectMenu(btn.styleSheet()))
-        #     self.ui.crypto_analysis_btn.clicked.connect(self.cryptoanalysis_vigenere)
+        if btnName == "btn_analysis":
+            widgets.stackedWidget.setCurrentWidget(widgets.cryptoanalysis)
+            UIFunctions.resetStyle(self, btnName)
+            btn.setStyleSheet(UIFunctions.selectMenu(btn.styleSheet()) + "border-left: 2px solid rgb(142, 247, 250);")
+            self.ui.crypto_analysis_btn.clicked.connect(self.cryptoanalysis_vigenere)
 
         # PRINT BTN NAME
         print(f'Button "{btnName}" pressed!')
