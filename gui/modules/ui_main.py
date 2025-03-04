@@ -2133,12 +2133,12 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"MainWindow", None))
         self.titleLeftApp.setText(QCoreApplication.translate("MainWindow", u"ENKRYPTOKITTY", None))
-        self.titleLeftDescription.setText(QCoreApplication.translate("MainWindow", u"Mantente seguro", None))
+        self.titleLeftDescription.setText(QCoreApplication.translate("MainWindow", u"Cifrado seguro", None))
         self.toggleButton.setText(QCoreApplication.translate("MainWindow", u"", None))
         self.btn_classical.setText(QCoreApplication.translate("MainWindow", u"Encriptación clásica", None))
         self.btn_block.setText(QCoreApplication.translate("MainWindow", u"Encriptación de Imágenes", None))
         self.btn_public_key.setText(QCoreApplication.translate("MainWindow", u"Encriptación de llave pública", None))
-        self.btn_analysis.setText(QCoreApplication.translate("MainWindow", u"Análisis de frecuencia", None))
+        self.btn_analysis.setText(QCoreApplication.translate("MainWindow", u"Criptoanálisis", None))
         self.extraLabel.setText(QCoreApplication.translate("MainWindow", u"Left Box", None))
 #if QT_CONFIG(tooltip)
         self.extraCloseColumnBtn.setToolTip(QCoreApplication.translate("MainWindow", u"Close left box", None))
@@ -2235,7 +2235,7 @@ class Ui_MainWindow(object):
         self.block_key_message.setText(QCoreApplication.translate("MainWindow", u"Llave", None))
         self.block_decrypt_btn.setText(QCoreApplication.translate("MainWindow", u"Desencriptar", None))
         self.block_decrypt_output.setText("")
-        self.crypto_tittle.setText(QCoreApplication.translate("MainWindow", u"Criptoanálisis de frecuencias", None))
+        self.crypto_tittle.setText(QCoreApplication.translate("MainWindow", u"Criptoanálisis de Vigenère", None))
         self.crypto_analysis_btn.setText(QCoreApplication.translate("MainWindow", u"Analizar", None))
         self.public_key_list.setItemText(0, QCoreApplication.translate("MainWindow", u"RSA", None))
         self.public_key_list.setItemText(1, QCoreApplication.translate("MainWindow", u"Rabin", None))
@@ -2254,6 +2254,6 @@ class Ui_MainWindow(object):
         self.btn_message.setText(QCoreApplication.translate("MainWindow", u"Message", None))
         self.btn_print.setText(QCoreApplication.translate("MainWindow", u"Print", None))
         self.btn_logout.setText(QCoreApplication.translate("MainWindow", u"Logout", None))
-        self.creditsLabel.setText(QCoreApplication.translate("MainWindow", u"Protegete con EnkryptoKitty", None))
+        self.creditsLabel.setText(QCoreApplication.translate("MainWindow", u"Cifrado con EnkryptoKitty", None))
     # retranslateUi
 
