@@ -4,7 +4,7 @@ from Crypto.Util import number
 
 # Función para generar un número primo aleatorio grande
 def generar_primo():
-    p=number.getPrime(8)
+    p=number.getPrime(2048)
     return p
 
 # Función para generar un número primo en el rango de caracteres imprimibles ASCII

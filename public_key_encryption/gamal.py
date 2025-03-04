@@ -24,7 +24,7 @@ def calculate_beta(alpha, d, p):
     return pow(alpha, d, p)
 
 # Función para encriptar un mensaje
-def encrypt_message(message,clavPub k):
+def encrypt_message(message,clavPub, k):
     alpha, beta,p=clavPub
     # Convertir el mensaje a un número entero
     m = int.from_bytes(message.encode(), 'big')
